@@ -1,1 +1,1 @@
-INSTANCENAME='v6unix'
+INSTANCENAME='ihnp4'
