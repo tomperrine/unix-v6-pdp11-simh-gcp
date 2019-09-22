@@ -1,1 +1,1 @@
-INSTANCENAME='ihnp4'
+INSTANCENAME='test-pdp11'
