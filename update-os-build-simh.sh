@@ -1,7 +1,13 @@
 #!/bin/sh
+# This runs on the Ubuntu instance where SIMH will be run
+#
+# This is copied onto the instance by the "launch-pdp-11.sh" script
 
-# this will copied onto and run on the host that's being installed
-# all that should be there is the base OS (must have git client)
+# update the OS
+# get dependencies for building SIMH
+# build SIMH
+# do a set of boots
+# tape boot (tboot.ini) which will build the file systems and l
 
 # must run as root, obviously
 
@@ -37,6 +43,16 @@ make pdp11
 # emulator is in BIN/pdp11
 
 date
+
+cd
+
+# get a bootable UNIX v6 PDP-11 tape image
+wget http://sourceforge.net/projects/bsd42/files/Install%20tapes/Research%20Unix/Unix-v6-Ken-Wellsch.tap.bz2
+bunzip2 *.bz2
+
+# put it in the right place for the emulator
+mv Unix-v6-Ken-Wellsch.tap dist.tap
+
 
 # TODO 
 # get and unpack V6 tap
