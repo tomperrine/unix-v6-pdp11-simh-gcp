@@ -6,12 +6,22 @@
 # update the OS
 # get dependencies for building SIMH
 # build SIMH
+
+# follow http://gunkies.org/wiki/Installing_Unix_v6_(PDP-11)_on_SIMH
+
 # do a set of boots
 # tape boot (tboot.ini) which will build the file systems and l
 
 # must run as root, obviously
 
 set -v
+
+# get a bootable UNIX v6 PDP-11 tape image, need it for later
+wget http://sourceforge.net/projects/bsd42/files/Install%20tapes/Research%20Unix/Unix-v6-Ken-Wellsch.tap.bz2
+bunzip2 *.bz2
+
+# put it in the right place for the emulator
+mv Unix-v6-Ken-Wellsch.tap dist.tap
 
 date
 # Begin with the Google standard Ubuntu 18.04 LTS (not the minimal)
@@ -46,19 +56,13 @@ date
 
 cd
 
-# get a bootable UNIX v6 PDP-11 tape image
-wget http://sourceforge.net/projects/bsd42/files/Install%20tapes/Research%20Unix/Unix-v6-Ken-Wellsch.tap.bz2
-bunzip2 *.bz2
-
-# put it in the right place for the emulator
-mv Unix-v6-Ken-Wellsch.tap dist.tap
+# at this point, we have an emulator and a v6 tape
 
 
-# TODO 
-# get and unpack V6 tap
-# disk prep
-# build etc
-# follow http://gunkies.org/wiki/Installing_Unix_v6_(PDP-11)_on_SIMH
+# because the user will have to interact with the emulator
+# (not everything can be scripted)
+# tell the user to log in and run those scripts
+
 
 
 
