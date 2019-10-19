@@ -15,6 +15,14 @@
 # TODO - check to see that the instance does not already exist
 # use gcloud compute instances list --filter="name=(test-pdp11)"
 
+# does the instance we're going to create already exist?
+# Note - the command doesn't return a usable exit code so we have to test separately
+tt=`gcloud compute instances list --filter="name=($INSTANCENAME)" | grep $INSTANCENAME | wc -l `
+if [ $tt != '0' ] ; then
+    echo "instance $INSTANCENAME already exists... exiting"
+    exit 1
+fi
+
 echo "launching instance, patching (can take up to 10 minutes on a tiny)..."
 ../create-simple-google-instance/create-instance.sh
 
