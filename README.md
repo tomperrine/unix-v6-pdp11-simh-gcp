@@ -7,13 +7,13 @@ an emulated PDP-11 (using SIMH) in the Google Cloud (GCP).
 This uses several scripts and configuration files:
 
 * launch-pdp11.sh - The master script creates a place to run the SIMH emulator.
-** creates a GCP instance running Ubuntu
-** copies the update-os-build-simh.sh script onto the instance and runs it
-** displays information at the end to tell the user how to complete the installation
+  * creates a GCP instance running Ubuntu
+* copies the update-os-build-simh.sh script onto the instance and runs it
+  * displays information at the end to tell the user how to complete the installation
 * update-os-build-simh.sh - gets SIMH PDP-11 emulator running in the instance
-** updates Ubuntu
-** installs all needed dependencie
-** downloads, configures and builds SIMH for PDP-11
+  * updates Ubuntu
+  * installs all needed dependencie
+  * downloads, configures and builds SIMH for PDP-11
 
 At the end of this process you have a running Ubuntu system with a PDP-11 emulator ready to install v6 UNIX
 
@@ -24,7 +24,7 @@ The end of the launch-pdp11.sh script provides instructions on how to install V6
 * simh-master/BIN/pdp11 normalboot.ini - boots the fully functional PDP-11 with all software. Use this for all subsequent boots of the UNIX guest
 
 
-=References=
+# References
 
 
 * https://github.com/simh/simh/archive/master.zip
