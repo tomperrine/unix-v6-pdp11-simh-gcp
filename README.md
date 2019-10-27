@@ -1,5 +1,7 @@
-# pdp-11-in-gcp
+# unix-v6-pdp11-simh-gcp   (WAS pdp-11-in-gcp)
 tooling to automagically create a PDP-11 using simh in GCP
+(Renamed from pdp-11-i-gcp)
+
 
 This software creates a full functional UNIX v6 (1976) system running on
 an emulated PDP-11 (using SIMH) in the Google Cloud (GCP).
