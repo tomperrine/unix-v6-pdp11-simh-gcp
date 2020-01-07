@@ -2,6 +2,7 @@
 tooling to automagically create a PDP-11 using simh in GCP
 (Renamed from pdp-11-i-gcp)
 
+Stable version - 2020-01-06 - I don't expect to make any changes for the forseeable future.
 
 This software creates a full functional UNIX v6 (1976) system running on
 an emulated PDP-11 (using SIMH) in the Google Cloud (GCP).
